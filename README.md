@@ -41,3 +41,9 @@ The package comprises several scripts, each with a specific purpose, aimed at fa
 
 This package streamlines the process of molecular conformer generation and energy calculations, providing a comprehensive toolkit for drug discovery endeavors.
 
+
+## License
+This project is licensed under the [MIT License](LICENSE.md).
+
+## Author
+Anup Kumar
