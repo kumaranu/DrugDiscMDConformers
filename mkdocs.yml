@@ -14,7 +14,7 @@ repo_url: https://github.com/kumaranu/DrugDiscMDConformers/
 edit_uri: blob/main/docs/
 
 theme:
-  name: pydata
+  name: readthedocs
   palette:
     primary: blue
     accent: light-blue
