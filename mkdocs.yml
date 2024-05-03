@@ -14,27 +14,11 @@ repo_url: https://github.com/kumaranu/DrugDiscMDConformers/
 edit_uri: blob/main/docs/
 
 theme:
-  features:
-    - content.action.edit
-    - content.code.copy
-    - content.code.select
-    - content.code.annotate
-    - content.tabs.link
-    - content.tooltips
-    - navigation.footer
-    - navigation.path
-    - navigation.tracking
-    - navigation.sections
-    - navigation.top
-    - search.highlight
-    - search.suggest
-    - search.share
-    - header.autohide
-    - toc.follow
-  name: material
+  name: pydata
   palette:
-    primary: orange
-    scheme: slate
+    primary: blue
+    accent: light-blue
+
 
 markdown_extensions:
   - abbr
