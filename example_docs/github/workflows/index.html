@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="YourName" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>GitHub Actions - DrugDiscMDConformers</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GitHub Actions";
+        var mkdocs_page_input_path = "example_docs/github/workflows.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> DrugDiscMDConformers
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code Documentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >DrugDiscMDConformers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/confgen_rdkit/">confgen_rdkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >examples</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/examples/sample/">sample</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/getEnergy/">getEnergy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/getEnergy_sol/">getEnergy_sol</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/main/">main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/run/">run</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/sol_run/">sol_run</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/conduct/">Code of Conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">DrugDiscMDConformers</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">GitHub Actions</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/kumaranu/DrugDiscMDConformers/blob/main/docs/example_docs/github/workflows.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="github-actions">GitHub Actions<a class="headerlink" href="#github-actions" title="Permanent link">&para;</a></h1>
+<h2 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h2>
+<p>The last major piece of the puzzle is GitHub Actions, which is an automated suite of workflows that run every time a commit or pull request is made. The GitHub workflows can be found in the <code>.github/workflows</code> folder.</p>
+<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
+<p>The <code>/.github/workflows/tests.yaml</code> file contains the workflow to have GitHub automatically run the full suite of tests on every commit and pull request. For the most basic case outlined here, you do not need to make any modifications (other than, perhaps, the desired Python versions you wish to test on).</p>
+<p>By default, the test suite is set up to install the following packages:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>tests/requirements.txt
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>pip<span class="w"> </span>install<span class="w"> </span>.<span class="o">[</span>dev<span class="o">]</span>
+</span></code></pre></div>
+<p>As you can see above, it will install specific versions of the dependencies outlined in <code>/tests/requirements.txt</code>. Unlike <code>pyproject.toml</code>, you want to include specific versions here so that your test suite is reproducible.</p>
+<p>The <code>/.github/dependabot.yml</code> file is set up such that <a href="https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide">Dependabot</a> will automatically open pull requests to update any versions in your <code>/tests/requirements.txt</code> file as they come out so that your code will always be tested on the newest releases of the various dependencies. This will ensure that your code doesn't break as dependencies update, but if it does, you will know what needs fixing.</p>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>The <code>/.github/workflows/docs.yaml</code> file contains the workflow to have GitHub test the build process for the documentation and deploy it (if enabled).</p>
+<p>To have your documentation automatically deployed on a GitHub webpage:</p>
+<ol>
+<li>Go to the settings page of your repository.</li>
+<li>Click the "Pages" section under "Code and automation."</li>
+<li>Select "Deploy from a branch" under "Source"</li>
+<li>Set the branch to be "gh-pages" with "/ (root)" as the folder.</li>
+<li>Wait a minute and refresh the page. You'll see a message that your site is live with a URL to the documentation.</li>
+</ol>
+<p><img alt="" src="../../media/deploy_docs.png" /></p>
+<p>Once this process is done, the documentation will be live and will update with each commit.</p>
+<h2 id="release">Release<a class="headerlink" href="#release" title="Permanent link">&para;</a></h2>
+<p>The <code>/.github/workflows/release.yaml</code> file contains the workflow to have GitHub upload your package to PyPI every time you mint a new release on GitHub. This is a slightly more advanced topic that you can read more about at a later time, but it's there for when you need it.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/kumaranu/DrugDiscMDConformers/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

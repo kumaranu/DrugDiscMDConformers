@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="YourName" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Writing the Docs - DrugDiscMDConformers</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Writing the Docs";
+        var mkdocs_page_input_path = "example_docs/mkdocs/docs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> DrugDiscMDConformers
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Code Documentation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >DrugDiscMDConformers</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/confgen_rdkit/">confgen_rdkit</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" >examples</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/examples/sample/">sample</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/getEnergy/">getEnergy</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/getEnergy_sol/">getEnergy_sol</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/main/">main</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/run/">run</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../reference/DrugDiscMDConformers/sol_run/">sol_run</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/changelog/">Changelog</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/conduct/">Code of Conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../about/license/">License</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">DrugDiscMDConformers</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Writing the Docs</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/kumaranu/DrugDiscMDConformers/blob/main/docs/example_docs/mkdocs/docs.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="writing-the-docs">Writing the Docs<a class="headerlink" href="#writing-the-docs" title="Permanent link">&para;</a></h1>
+<h2 id="mkdocs">Mkdocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
+<p>Now it's time to write some documentation! This isn't very difficult, and of course you're reading some documentation right now. The documentation is written using markdown, which is the same way GitHub comments are formatted.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Check out the <a href="https://www.markdownguide.org/basic-syntax/">Markdown Guide</a> for an overview of the basic syntax.</p>
+</div>
+<p>This DrugDiscMDConformers repository uses a documentation format called mkdocs, specifically a useful theme called <a href="https://squidfunk.github.io/mkdocs-material/">Material for Mkdocs</a>. This enables many wonderful goodies like the "tip" callout you see above and much more.</p>
+<h2 id="adding-markdown-files">Adding Markdown Files<a class="headerlink" href="#adding-markdown-files" title="Permanent link">&para;</a></h2>
+<p>Your documentation will live in the <code>/docs</code> folder. You can think of each markdown (<code>.md</code>) file as being a specific page in the documentation, and each folder as being a related collection of pages. The markdown page you are reading right now is found at <code>/docs/example_docs/mkdocs/docs.md</code>, for instance. Of course, you will want to replce the <code>/docs/example_docs</code> folder with your own documentation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You typically do not need to touch the <code>/docs/gen_ref_pages.py</code> script. It is used to automatically build the documentation for your code from its docstrings.</p>
+</div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/kumaranu/DrugDiscMDConformers/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
