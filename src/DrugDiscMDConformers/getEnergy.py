@@ -6,6 +6,7 @@ import os, sys, re
 #                                                                         #
 ###########################################################################
 
+
 os.chdir('molecular_files')
 os.chdir('rdkit_conformers')
 nums = ["%.4d" % i for i in range(int(sys.argv[1]))]
