@@ -32,7 +32,7 @@ def run_solvated_optimization(num1: int, num2: int) -> None:
         os.chdir('molecular_files')
         os.chdir('rdkit_conformers')
         v: List[str] = ["%.4d" % i for i in range(num1, num2)]
-        
+
         # Generating a pool of parallel processes
         with Pool(46) as p:  # Using 46 processes due to the limit of 48 cores on the computing machine
             p.map(e2, v)
